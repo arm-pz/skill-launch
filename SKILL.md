@@ -7,11 +7,11 @@ description: >-
   all handled in one pipeline. Chains draft-skill, tune-skill and findable-polish sequentially.
   Not for editing existing skills (use tune-and-polish), and not for a batch of prompts the user
   already wrote (use prompts-to-skill).
-version: 1.0.0
+version: 0.1.0
 argument-hint: "[skill idea]"
 user-invocable: true
 metadata:
-  version: "1.0.0"
+  version: "0.1.0"
 ---
 
 # Skill-Launch
