@@ -8,13 +8,14 @@ When you have an idea for a skill and want to take it from concept to published 
 
 ```text
 /skill-launch "I want a skill that checks if my code is production-ready"
-/skill-launch [paste list of prompts the skill should handle]
+/skill-launch "a skill that turns support tickets into release notes"
 Create a skill that audits repos before deployment.
 ```
 
 ## When to use
 
 - You have an idea for a skill and want to build it completely
+- (If you have a batch of prompts instead of an idea, that is prompts-to-skill's job.)
 - Someone says "make me a skill for X" and you want it done end-to-end
 - You want triggering, validation, and discoverability all handled
 - You're creating multiple skills and want a consistent pipeline

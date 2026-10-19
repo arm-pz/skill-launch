@@ -5,9 +5,10 @@ description: >-
   then audit its discoverability and polish it with findable-polish. Use when the user has an idea for
   a skill and wants to go from zero to published, with triggering, validation and discovery surfaces
   all handled in one pipeline. Chains draft-skill, tune-skill and findable-polish sequentially.
-  Not for editing existing skills (use tune-and-polish).
+  Not for editing existing skills (use tune-and-polish), and not for a batch of prompts the user
+  already wrote (use prompts-to-skill).
 version: 1.0.0
-argument-hint: "[skill idea | prompt list]"
+argument-hint: "[skill idea]"
 user-invocable: true
 metadata:
   version: "1.0.0"
@@ -21,7 +22,7 @@ Execute a complete skill creation pipeline in three phases: **Draft-Skill** crea
 
 ```text
 /skill-launch "I want a skill that checks if my code is production-ready"
-/skill-launch [paste list of prompts the skill should handle]
+/skill-launch "a skill that turns support tickets into release notes"
 Create a skill that audits repos before deployment.
 ```
 
@@ -31,7 +32,9 @@ If no idea is provided, ask the user what problem they want the skill to solve.
 
 ### Phase 1: Create with Draft-Skill
 
-Invoke the **Draft-Skill skill** with the provided idea or prompt list:
+Invoke the **Draft-Skill skill** with the provided idea. If the input is a list of prompts
+rather than an idea, stop and hand the batch to `prompts-to-skill`, which owns the intent interview,
+the gates and the packaging for prompt sets:
 
 1. Confirm intent before writing anything.
 2. Decide what belongs in scripts vs references vs assets.
@@ -95,6 +98,9 @@ Format so the user can copy-paste directly into their repo and push.
 ## Boundaries
 
 - **Does not** push to GitHub or publish to marketplace automatically — hands over commands.
+- **Does not** own the push or the listing either way: pushing existing clones is `upstream-check`,
+  GitHub About text, topics and directory entries are `findable`, packaging a finished folder is
+  `prompts-to-skill-release`. This skill runs the pipeline for one new skill from an idea.
 - **Does not** create multiple skills at once — one skill per invocation.
 - **Does not** skip validation — tune-skill must pass before proceeding to findable-polish.
 - **Does not** invent features the user didn't ask for — stays faithful to the original idea.
