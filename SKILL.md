@@ -1,6 +1,11 @@
 ---
 name: skill-launch
-description: Launch a new skill end-to-end: create it with Draft-Skill, validate and tune it with Tune-Skill, then audit its discoverability and polish it with Findable-Polish. Use when the user has an idea for a skill and wants to go from zero to published — with triggering, validation, and discovery surfaces all handled in one pipeline. Chains draft-skill → tune-skill → findable-polish sequentially. Not for editing existing skills (use tune-and-polish).
+description: >-
+  Launch a new skill end-to-end. Create it with draft-skill, validate and tune it with tune-skill,
+  then audit its discoverability and polish it with findable-polish. Use when the user has an idea for
+  a skill and wants to go from zero to published, with triggering, validation and discovery surfaces
+  all handled in one pipeline. Chains draft-skill, tune-skill and findable-polish sequentially.
+  Not for editing existing skills (use tune-and-polish).
 version: 1.0.0
 argument-hint: "[skill idea | prompt list]"
 user-invocable: true
