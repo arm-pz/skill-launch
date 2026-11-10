@@ -16,7 +16,7 @@ metadata:
 
 # Skill-Launch
 
-Execute a complete skill creation pipeline in three phases: **Draft-Skill** creates the initial skill from an idea, **Tune-Skill** validates and fine-tunes its triggering and boundaries, then **Findable-Polish** audits its discoverability and generates polished alternatives for repo metadata, README, and site page.
+Execute a complete skill creation pipeline in three phases, followed by a results summary: **Draft-Skill** creates the initial skill from an idea, **Tune-Skill** validates and fine-tunes its triggering and boundaries, then **Findable-Polish** audits its discoverability and generates polished alternatives for repo metadata, README, and site page.
 
 ## Invocation
 
@@ -41,7 +41,7 @@ the gates and the packaging for prompt sets:
 3. Write SKILL.md with description that actually triggers, H1 matching name, body with clear workflow.
 4. Create reference files for handoff protocols, command routing, test cases.
 5. Add scripts directory if automation is needed.
-6. Output: a complete skill folder at `~/.qoder/skills/<skill-name>/`.
+6. Output: a complete skill folder in the skills directory the agent reads (`~/.claude/skills/<skill-name>/` for Claude Code, `~/.qoder/skills/<skill-name>/` for Qoder).
 
 **Handoff rule:** Capture draft-skill's output, especially the skill name chosen and any design decisions made.
 
@@ -97,13 +97,13 @@ Format so the user can copy-paste directly into their repo and push.
 
 ## Boundaries
 
-- **Does not** push to GitHub or publish to marketplace automatically — hands over commands.
+- **Does not** push to GitHub or publish to marketplace automatically. It hands over commands.
 - **Does not** own the push or the listing either way: pushing existing clones is `upstream-check`,
   GitHub About text, topics and directory entries are `findable`, packaging a finished folder is
   `prompts-to-skill-release`. This skill runs the pipeline for one new skill from an idea.
-- **Does not** create multiple skills at once — one skill per invocation.
-- **Does not** skip validation — tune-skill must pass before proceeding to findable-polish.
-- **Does not** invent features the user didn't ask for — stays faithful to the original idea.
+- **Does not** create multiple skills at once. One skill per invocation.
+- **Does not** skip validation. Tune-skill must pass before proceeding to findable-polish.
+- **Does not** invent features the user didn't ask for. It stays faithful to the original idea.
 
 ## Dependencies
 

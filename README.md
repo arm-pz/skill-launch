@@ -46,10 +46,10 @@ Requires `draft-skill`, `tune-skill`, `findable-polish` (which needs `findable` 
 
 ## Related
 
-- **[draft-skill](https://github.com/arm-pz/draft-skill)** — Create skills from ideas (phase 1)
-- **[tune-skill](https://github.com/arm-pz/tune-skill)** — Validate and fix triggers (phase 2)
-- **[findable-polish](https://github.com/arm-pz/findable-polish)** — Audit and polish discoverability (phase 3)
-- **[tune-and-polish](https://github.com/arm-pz/tune-and-polish)** — Tune + polish existing skills
+- **[draft-skill](https://github.com/arm-pz/draft-skill)**: Create skills from ideas (phase 1)
+- **[tune-skill](https://github.com/arm-pz/tune-skill)**: Validate and fix triggers (phase 2)
+- **[findable-polish](https://github.com/arm-pz/findable-polish)**: Audit and polish discoverability (phase 3)
+- **[tune-and-polish](https://github.com/arm-pz/tune-and-polish)**: Tune + polish existing skills
 
 ## License
 
